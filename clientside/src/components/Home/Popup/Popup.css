@@ -1,0 +1,58 @@
+.popup {
+    position: fixed;
+    top: 9vh;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(15 23 42);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popupinner {
+    width: 50%;
+    height: 50vh;
+    background-color: rgb(30 41 59);
+    border-radius: 5px;
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+form div input {
+    background-color: rgb(15 23 42);
+    color: white;
+    border: 1px solid white;
+    padding: 1% 0;
+}
+
+form div label {
+    color: white;
+}
+.popupclosebutton {
+    color: white;
+    font-size: larger;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.active {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

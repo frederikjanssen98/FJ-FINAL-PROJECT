@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@200&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+svg {
+  vertical-align: middle;
+}
+
+.mainpage {
+  background-color: rgb(15 23 42);
+  display: flex;
+  justify-content: center;
+}
+
+.leftside {
+  width: 40vw;
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rightside {
+  width: 40vw;
+  height: 90vh;
+}
+
+@media  screen and (max-width: 800px) {
+  .mainpage {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .leftside {
+    flex-wrap: nowrap;
+    width: 100vw;
+  }
+}
