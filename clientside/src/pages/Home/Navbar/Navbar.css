@@ -6,6 +6,9 @@ header {
     align-items: center;
     width: 100vw;
     height: 9vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
 }
 
 nav {

@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { FaRegAddressCard, FaMapMarkerAlt, FaSignOutAlt  } from "react-icons/fa";
+import { Navigate } from 'react-router-dom';
 import Popup from '../Popup/Popup'
 import './Navbar.css'
 
@@ -21,6 +22,10 @@ function Navbar({ logout }) {
     logout();
   }
 
+  const handleContact = () => {
+    Navigate("/contact")
+  }
+
   return (
     <>
     <header>
@@ -30,7 +35,7 @@ function Navbar({ logout }) {
                 <p>Made with &#10084;&#65039; in HH</p>
             </div>
             <ul className={active}>
-              <li className='listitems listitembutton'>
+              <li className='listitems listitembutton' onClick={handleContact}>
                 <FaRegAddressCard/>Contact
               </li>
               <li className='listitems listitembutton' onClick={enablePopup}>

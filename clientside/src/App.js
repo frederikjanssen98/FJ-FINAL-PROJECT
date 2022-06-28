@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Register from "./pages/Authentication/Register/Register";
 import Login from "./pages/Authentication/Login/Login";
+import Contact from "./pages/Contact/Contact"
 
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
           <Route
             path="/"
             element={<Home logout={() => setAuth(false)} />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact/>}
           />
         </>
       )}

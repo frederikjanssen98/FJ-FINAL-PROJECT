@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import './Login.css'
+import Nav from '../Auth_Nav/Nav';
 
 function Login({ authenticate }) {
   const [name, setName] = useState("");
@@ -39,8 +40,11 @@ function Login({ authenticate }) {
     }
   }
   return (
+    <>
+    <Nav/>
+    <section className='logincontainer'>
     <section className='login'>
-      <form>
+      <form className='loginform'>
       <h1 style={{color: "white"}}>Please Login</h1>
         <div>
           <label for="name">Name</label>
@@ -57,6 +61,8 @@ function Login({ authenticate }) {
         <Link to="/register">Not registerd?</Link>
       </form>
     </section>
+    </section>
+    </>
   )
 }
 

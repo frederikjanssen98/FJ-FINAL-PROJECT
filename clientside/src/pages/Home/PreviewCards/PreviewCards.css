@@ -89,8 +89,8 @@
         white-space: nowrap;
       }
       .previewcard {
-        height: 40%;
         width: 43%;
+        height: 35vh;
       }
       .previewauthor span {
         font-size: 10px;

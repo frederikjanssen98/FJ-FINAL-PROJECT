@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
 import './Register.css'
+import Nav from '../Auth_Nav/Nav'
 
 function Register({ authenticate }) {
 
@@ -27,8 +28,11 @@ function Register({ authenticate }) {
   }
 
   return (
+    <>
+    <Nav/>
+    <section className='registercontainer'>
     <section className='register'>
-      <form>
+      <form className='registerform'>
       <h1 style={{color: "white"}}>Please Register</h1>
         <div>
           <label for="name">Name</label>
@@ -44,6 +48,8 @@ function Register({ authenticate }) {
         </div>
       </form>
     </section>
+    </section>
+    </>
   )
 }
 
