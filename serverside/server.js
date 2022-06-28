@@ -64,9 +64,9 @@ res.send(data_in_users_collection);
 
 app.post("/login", async (req, res) => {
     const usersData = await USERS.find({
-        name: req.body.name,
+        name: req.body.loginName,
       });
-    res.send(usersData)
+    res.send(JSON.stringify(usersData))
 });
 
 // GET LOCATIONS ROUTE

@@ -3,7 +3,7 @@ import { FaRegAddressCard, FaMapMarkerAlt, FaSignOutAlt  } from "react-icons/fa"
 import Popup from '../Popup/Popup'
 import './Navbar.css'
 
-function Navbar() {
+function Navbar({ logout }) {
   const [active, setActive] = useState('menuitems');
   const menuToggle = () => {
     active === 'menuitems' ? setActive('menuitems_active') : setActive('menuitems');
@@ -15,6 +15,10 @@ function Navbar() {
   }
   const disablePopup = () => {
     setTogglePopup(false);
+  }
+
+  const handleLogout = () => {
+    logout();
   }
 
   return (
@@ -32,7 +36,7 @@ function Navbar() {
               <li className='listitems listitembutton' onClick={enablePopup}>
                 <FaMapMarkerAlt/>New Location
               </li>
-              <li className='listitems listitembutton'>
+              <li className='listitems listitembutton' onClick={handleLogout}>
                 <FaSignOutAlt/>Logout
               </li>
             </ul>

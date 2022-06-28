@@ -4,10 +4,10 @@ import PreviewCards from './PreviewCards/PreviewCards'
 import Map from './Map/Map'
 import './Home.css'
 
-function Home() {
+function Home( {logout} ) {
   return (
    <>
-   <Navbar/>
+   <Navbar logout={() => logout()}/>
     <section className='mainpage'>
       <section className='leftside'>
         <PreviewCards/>

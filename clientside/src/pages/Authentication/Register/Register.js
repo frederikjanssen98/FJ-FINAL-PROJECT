@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { useNavigate } from "react-router-dom";
-import md5 from "md5"
 import './Register.css'
 
 function Register({ authenticate }) {
@@ -37,7 +36,7 @@ function Register({ authenticate }) {
         </div>
         <div>
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" onChange={(e) => setPassword(md5(e.target.value))}></input>
+          <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}></input>
         </div>
         <div>
           <label></label>
