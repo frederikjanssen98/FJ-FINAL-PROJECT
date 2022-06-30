@@ -112,3 +112,6 @@ nav {
     }
 }
 
+.logo {
+    cursor: pointer;
+}

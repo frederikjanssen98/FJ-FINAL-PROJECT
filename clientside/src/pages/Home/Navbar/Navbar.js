@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { FaRegAddressCard, FaMapMarkerAlt, FaSignOutAlt  } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import Popup from '../Popup/Popup'
 import './Navbar.css'
@@ -22,15 +23,21 @@ function Navbar({ logout }) {
     logout();
   }
 
+  const navigate = useNavigate();
+
   const handleContact = () => {
-    Navigate("/contact")
+    navigate("/contact");
+  }
+
+  const handleHome = () => {
+    navigate("/")
   }
 
   return (
     <>
     <header>
         <nav>
-            <div className='logo'>
+            <div className='logo' onClick={handleHome}>
                 <h1>Frederik Janssen</h1>
                 <p>Made with &#10084;&#65039; in HH</p>
             </div>
